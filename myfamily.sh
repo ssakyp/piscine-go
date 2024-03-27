@@ -1,0 +1,1 @@
+curl -s https://zero.academie.one/assets/superhero/all.json | jq  --arg hero_id "$HERO_ID" ' .[] | select ( .id == ($hero_id | tonumber)  ) | .connections.relatives  ' | sed 's/"//g'

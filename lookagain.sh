@@ -1,0 +1,1 @@
+find . -type f  -name "*.sh" -exec basename {} \; | cut -f1 -d '.' | sort -r | sed 's/$//'
